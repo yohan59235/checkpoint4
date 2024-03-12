@@ -33,4 +33,5 @@
 .Register_Page > button:hover {
     background-color: var(--turquoise-color);
     transition: 0.5s ease;
+    color: black;
 }

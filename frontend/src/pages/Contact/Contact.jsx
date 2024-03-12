@@ -19,7 +19,7 @@ function Contact() {
           src="http://localhost:3310/public/assets/images/linkedin.png"
           alt=""
         />
-        <a href="www.linkedin.com/in/yohan-collinse-5888b22a7">
+        <a href="https://www.linkedin.com/in/yohan-collinse-5888b22a7/">
           Lien vers mon LinkedIn
         </a>
       </div>

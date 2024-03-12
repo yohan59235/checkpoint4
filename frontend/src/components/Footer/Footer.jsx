@@ -15,9 +15,6 @@ function Footer() {
         <Link to="/contact">
           <p className="Contact">Contact</p>
         </Link>
-        <Link to="/reclamation">
-          <p className="Reclamation">Reclamation</p>
-        </Link>
       </div>
 
       <div className="Second_List_Link">

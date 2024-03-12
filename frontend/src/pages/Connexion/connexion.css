@@ -33,10 +33,16 @@
 .Connexion_Page > button:hover {
     background-color: var(--turquoise-color);
     transition: 0.5s ease;
+    color: black;
 }
 
 .Link_Register {
     color: white;
     text-decoration: none;
     margin: 2rem 0rem 2rem 0rem;
+}
+
+.Link_Register:hover {
+    color: var(--turquoise-color);
+    transition: 0.5s ease;
 }

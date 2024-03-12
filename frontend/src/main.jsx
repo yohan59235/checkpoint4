@@ -9,7 +9,6 @@ import Connexion from "./pages/Connexion/Connexion";
 import Register from "./pages/Register/Register";
 import CarProfile from "./pages/CarProfile/CarProfile";
 import FAQ from "./pages/FAQ/FAQ";
-import Reclamation from "./pages/Reclamation/Reclamation";
 import Contact from "./pages/Contact/Contact";
 import Politique from "./pages/Politique/Politique";
 
@@ -44,10 +43,6 @@ const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ />,
-      },
-      {
-        path: "/reclamation",
-        element: <Reclamation />,
       },
     ],
   },
