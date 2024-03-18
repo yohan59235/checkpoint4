@@ -1,37 +1,37 @@
-.Register_Page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3rem;
+.Register_Page > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
 }
 
-.Register_Page > label {
-    margin: 3rem 0rem 1rem 0rem;
+.Register_Page > form > label {
+  margin: 3rem 0rem 1rem 0rem;
 }
 
-.Register_Page > input {
-    text-align: center;
-    width: 15rem;
-    height: 1.7rem;
-    background-color: var(--gray-color);
-    border: none;
-    border-bottom: 1px solid black;
-    color: white;
+.Register_Page > form > input {
+  text-align: center;
+  width: 15rem;
+  height: 1.7rem;
+  background-color: var(--gray-color);
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
 }
 
-.Register_Page > button {
-    border: none;
-    background-color: var(--black-color);
-    color: white;
-    width: 10rem;
-    height: 3rem;
-    margin: 3rem 0rem 2rem 0rem;
-    font-size: 1.2rem;
-    border-radius: 10px;
+.Button_Register {
+  border: none;
+  background-color: var(--black-color);
+  color: white;
+  width: 10rem;
+  height: 3rem;
+  margin: 3rem 0rem 2rem 0rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
 }
 
-.Register_Page > button:hover {
-    background-color: var(--turquoise-color);
-    transition: 0.5s ease;
-    color: black;
+.Button_Register:hover {
+  background-color: var(--turquoise-color);
+  transition: 0.5s ease;
+  color: black;
 }

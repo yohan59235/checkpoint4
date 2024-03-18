@@ -1,34 +1,49 @@
 .Footer_Component {
-    border-top: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Footer_Component > img {
-    filter: invert();
-    width: 12rem;
+  filter: invert();
+  width: 12rem;
 }
 
 .First_List_Link {
-    display: flex;
+  display: flex;
 }
 
 .Second_List_Link {
-    display: flex;
-    margin: 1rem 0rem;
+  display: flex;
+  margin: 1rem 0rem;
 }
 
 .Contact {
-    color: white;
-    margin-right: 1rem;
+  color: white;
+  margin-right: 1rem;
+}
+
+.Contact:hover {
+  color: var(--turquoise-color);
+  transition: 0.5s ease;
 }
 
 .FAQ {
-    color: white;
-    margin-right: 1rem;
+  color: white;
+  margin-right: 1rem;
+}
+
+.FAQ:hover {
+  color: var(--turquoise-color);
+  transition: 0.5s ease;
 }
 
 .Politique {
-    color: white;
+  color: white;
+}
+
+.Politique:hover {
+  color: var(--turquoise-color);
+  transition: 0.5s ease;
 }
