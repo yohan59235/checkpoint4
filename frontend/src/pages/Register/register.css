@@ -1,8 +1,13 @@
+.Register_Page > h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .Register_Page > form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .Register_Page > form > label {
@@ -34,4 +39,20 @@
   background-color: var(--turquoise-color);
   transition: 0.5s ease;
   color: black;
+}
+
+.Confirm_Champ {
+  text-align: center;
+}
+
+.close {
+  background-color: rgb(134, 255, 134);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Close:hover {
+  background-color: var(--turquoise-color);
 }

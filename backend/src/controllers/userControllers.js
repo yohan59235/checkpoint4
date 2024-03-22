@@ -37,6 +37,25 @@ const read = async (req, res, next) => {
 // The E of BREAD - Edit (Update) operation
 // This operation is not yet implemented
 
+const edit = async (req, res, next) => {
+  const userInfos = {
+    email: req.body.email,
+    nickname: req.body.nickname,
+    id: req.params.id,
+  };
+
+  try {
+    const result = await tables.user.update(userInfos);
+    if (result.affectedRows === 0) {
+      res.status(404).json({ msg: "user introuvable" });
+    } else {
+      res.json({ msg: "user modifié avec succès" });
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
 // The A of BREAD - Add (Create) operation
 
 const add = async (req, res, next) => {
@@ -57,11 +76,24 @@ const add = async (req, res, next) => {
 // The D of BREAD - Destroy (Delete) operation
 // This operation is not yet implemented
 
+const destroy = async (req, res, next) => {
+  try {
+    const result = await tables.user.delete(req.params.id);
+    if (result.affectedRows === 0) {
+      res.status(404).json({ msg: "user introuvable" });
+    } else {
+      res.json({ msg: "user supprimé avec succès" });
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
 // Ready to export the controller functions
 module.exports = {
   browse,
   read,
-  // edit,
+  edit,
   add,
-  // destroy,
+  destroy,
 };
