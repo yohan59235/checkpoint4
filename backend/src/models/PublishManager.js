@@ -1,16 +1,16 @@
 const AbstractManager = require("./AbstractManager");
 
-class UserManager extends AbstractManager {
+class PublishManager extends AbstractManager {
   constructor() {
-    super({ table: "user" });
+    super({ table: "publish" });
   }
 
   // The C of CRUD - Create operation
 
-  async create(userInfos) {
+  async create(publishInfos) {
     const [result] = await this.database.query(
-      `INSERT INTO ${this.table} (email, hashed_password, nickname) VALUES (?,?,?)`,
-      [userInfos.email, userInfos.hashedPassword, userInfos.nickname]
+      `INSERT INTO ${this.table} (image, description, id_user) VALUES (?,?,?)`,
+      [publishInfos.image, publishInfos.description, publishInfos.id_user]
     );
     return result.addUser;
   }
@@ -30,29 +30,19 @@ class UserManager extends AbstractManager {
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all items from the "item" table
-    const [rows] = await this.database.query(
-      `select id, email, hashed_password, nickname from ${this.table}`
-    );
+    const [rows] = await this.database.query(`select * from ${this.table}`);
 
     // Return the array of items
-    return rows;
-  }
-
-  async readByEmailWithPassword(email) {
-    const [rows] = await this.database.query(
-      `SELECT * FROM ${this.table} WHERE email=?`,
-      [email]
-    );
     return rows;
   }
 
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing item
 
-  async update(user) {
+  async update(publish) {
     const [rows] = await this.database.query(
-      `UPDATE ${this.table} SET email=?, nickname=? WHERE id=?`,
-      [user.email, user.nickname, user.id]
+      `UPDATE ${this.table} SET image=?, description=? WHERE id=?`,
+      [publish.image, publish.description, publish.id]
     );
     return rows;
   }
@@ -69,4 +59,4 @@ class UserManager extends AbstractManager {
   }
 }
 
-module.exports = UserManager;
+module.exports = PublishManager;

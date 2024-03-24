@@ -10,6 +10,7 @@ INSERT INTO user (email, hashed_password, nickname) VALUES ('admin@gmail.com', '
 CREATE TABLE publish (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   image BLOB,
+  description TEXT,
   id_user INT NOT NULL,
   CONSTRAINT fk_car_user
   FOREIGN KEY (id_user) REFERENCES user(id)

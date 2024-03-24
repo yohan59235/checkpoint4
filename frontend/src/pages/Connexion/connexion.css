@@ -1,48 +1,52 @@
 .Connexion_Page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3rem;
+  text-align: center;
+  margin-top: 3rem;
 }
 
-.Connexion_Page > label {
-    margin: 3rem 0rem 1rem 0rem;
+.Connexion_Page > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Connexion_Page > input {
-    text-align: center;
-    width: 15rem;
-    height: 1.7rem;
-    background-color: var(--gray-color);
-    border: none;
-    border-bottom: 1px solid black;
-    color: white;
+.Connexion_Page > form > label {
+  margin: 3rem 0rem 1rem 0rem;
 }
 
-.Connexion_Page > button {
-    border: none;
-    background-color: var(--black-color);
-    color: white;
-    width: 10rem;
-    height: 3rem;
-    margin-top: 3rem;
-    font-size: 1.2rem;
-    border-radius: 10px;
+.Connexion_Page > form > input {
+  text-align: center;
+  width: 15rem;
+  height: 1.7rem;
+  background-color: var(--gray-color);
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
 }
 
-.Connexion_Page > button:hover {
-    background-color: var(--turquoise-color);
-    transition: 0.5s ease;
-    color: black;
+.Button_Login {
+  border: none;
+  background-color: var(--black-color);
+  color: white;
+  width: 10rem;
+  height: 3rem;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.Button_Login:hover {
+  background-color: var(--turquoise-color);
+  transition: 0.5s ease;
+  color: black;
 }
 
 .Link_Register {
-    color: white;
-    text-decoration: none;
-    margin: 2rem 0rem 2rem 0rem;
+  color: white;
+  text-decoration: none;
+  margin: 2rem 0rem 2rem 0rem;
 }
 
 .Link_Register:hover {
-    color: var(--turquoise-color);
-    transition: 0.5s ease;
+  color: var(--turquoise-color);
+  transition: 0.5s ease;
 }

@@ -1,5 +1,5 @@
 const argon2 = require("argon2");
-// const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 const hashingOption = {
   type: argon2.argon2id,
@@ -24,30 +24,18 @@ const hashPassword = async (req, res, next) => {
   }
 };
 
-// const verifyToken = (req, res, next) => {
-//   try {
-//     const authorizationHeader = req.get("Authorization");
+const verifyToken = async (req, res, next) => {
+  try {
+    const token = req.cookies.auth;
 
-//     if (authorizationHeader == null) {
-//       throw new Error("Authorization header is missing");
-//     }
-
-//     const [type, token] = authorizationHeader.split(" ");
-
-//     if (type !== "Bearer") {
-//       throw new Error("Authorization header has not the 'Bearer' type");
-//     }
-
-//     req.auth = jwt.verify(token, process.env.APP_SECRET);
-//     next();
-//   } catch (error) {
-//     console.error(error);
-
-//     res.sendStatus(401);
-//   }
-// };
+    await jwt.verify(token, process.env.APP_SECRET);
+    next();
+  } catch (error) {
+    next(error);
+  }
+};
 
 module.exports = {
   hashPassword,
-  // verifyToken,
+  verifyToken,
 };
