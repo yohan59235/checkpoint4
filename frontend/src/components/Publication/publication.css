@@ -4,6 +4,7 @@
   border: 1px solid var(--turquoise-color);
   border-radius: 15px;
   margin: 1rem;
+  gap: 2rem;
 }
 
 .Publication_Area > h3 {
