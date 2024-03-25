@@ -9,9 +9,10 @@ INSERT INTO user (email, hashed_password, nickname) VALUES ('admin@gmail.com', '
 
 CREATE TABLE publish (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  image BLOB,
+  image VARCHAR(255) NOT NULL,
   description TEXT,
   id_user INT NOT NULL,
-  CONSTRAINT fk_car_user
   FOREIGN KEY (id_user) REFERENCES user(id)
-)
+);
+
+INSERT INTO publish (image, description, id_user) VALUES ('https://cdn.motor1.com/images/mgl/8LAjo/s1/2020-nissan-gt-r-nismo.jpg', 'Voici la voiture de mes rêves', 1);

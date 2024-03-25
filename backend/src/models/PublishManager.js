@@ -30,7 +30,9 @@ class PublishManager extends AbstractManager {
 
   async readAll() {
     // Execute the SQL SELECT query to retrieve all items from the "item" table
-    const [rows] = await this.database.query(`select * from ${this.table}`);
+    const [rows] = await this.database.query(
+      `SELECT publish.*, user.nickname AS user_nickname FROM ${this.table} INNER JOIN user ON publish.id_user = user.id`
+    );
 
     // Return the array of items
     return rows;

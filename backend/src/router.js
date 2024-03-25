@@ -31,6 +31,9 @@ router.delete("/logout", authControllers.disconnected);
 // Route to add a new item
 router.post("/items", itemControllers.add);
 router.post("/users", authMiddlewares.hashPassword, userControllers.add);
+
+// Route to database publish
+router.get("/publish", publishControllers.browse);
 router.post("/publish", authMiddlewares.verifyToken, publishControllers.add);
 
 // Route to update

@@ -1,0 +1,20 @@
+.Publication_Area {
+  text-align: center;
+  background-color: rgba(64, 224, 208, 0.196);
+  border: 1px solid var(--turquoise-color);
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+.Publication_Area > h3 {
+  margin-top: 0.5rem;
+}
+
+.Publication_Area > img {
+  width: 20rem;
+  margin: 1rem 0rem;
+}
+
+.Publication_Area > p {
+  margin-bottom: 1rem;
+}
