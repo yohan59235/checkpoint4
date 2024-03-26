@@ -1,3 +1,7 @@
+.CarProfile_Page {
+  text-align: center;
+}
+
 .CarProfile_Page > form {
   display: flex;
   flex-direction: column;

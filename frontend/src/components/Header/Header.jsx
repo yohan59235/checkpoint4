@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+
+import UserContext from "../../services/UseContext";
 
 import "./header.css";
 
 function Header() {
+  const { user } = useContext(UserContext);
+
+  const isConnected = user.id && user.id !== "null";
+
   return (
     <div className="Header">
       <Link to="/">
@@ -13,21 +19,38 @@ function Header() {
           alt="Logo du site"
         />
       </Link>
+
       <h1>Le Facebook de l'automobile</h1>
-      <Link to="/connexion">
-        <img
-          className="Header_User"
-          src="http://localhost:3310/public/assets/images/user.png"
-          alt="Icone utilisateur"
-        />
-      </Link>
-      <Link to="/carprofile">
-        <img
-          className="Header_Add_Car"
-          src="http://localhost:3310/public/assets/images/voiture.png"
-          alt="Icone ajout d'une voiture"
-        />
-      </Link>
+
+      {!isConnected ? (
+        <Link to="/connexion">
+          <img
+            className="Header_User"
+            src="http://localhost:3310/public/assets/images/user.png"
+            alt="Icone utilisateur"
+          />
+        </Link>
+      ) : null}
+
+      {isConnected ? (
+        <Link to="/monprofil">
+          <img
+            className="Header_Profile"
+            src="http://localhost:3310/public/assets/images/user.png"
+            alt="Icone mon profile"
+          />
+        </Link>
+      ) : null}
+
+      {isConnected ? (
+        <Link to="/carprofile">
+          <img
+            className="Header_Add_Car"
+            src="http://localhost:3310/public/assets/images/voiture.png"
+            alt="Icone ajout d'une voiture"
+          />
+        </Link>
+      ) : null}
     </div>
   );
 }

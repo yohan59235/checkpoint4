@@ -12,6 +12,7 @@ import CarProfile from "./pages/CarProfile/CarProfile";
 import FAQ from "./pages/FAQ/FAQ";
 import Contact from "./pages/Contact/Contact";
 import Politique from "./pages/Politique/Politique";
+import MonProfil from "./pages/Monprofil/MonProfil";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ />,
+      },
+      {
+        path: "/monprofil",
+        element: <MonProfil />,
       },
     ],
   },

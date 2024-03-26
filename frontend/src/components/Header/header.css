@@ -1,28 +1,34 @@
 .Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
 }
 
 .Header_Logo {
-    width: 5rem;
-    filter: invert();
+  width: 5rem;
+  filter: invert();
 }
 
 .Header > h1 {
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
 }
 
 .Header_User {
-    width: 2rem;
-    filter: invert();
+  width: 2rem;
+  margin-right: 1rem;
+  filter: invert();
+}
+
+.Header_Profile {
+  width: 2rem;
+  filter: invert();
 }
 
 .Header_Add_Car {
-    width: 2rem;
-    margin-right: 1rem;
-    filter: invert();
+  width: 2rem;
+  margin-right: 1rem;
+  filter: invert();
 }

@@ -16,17 +16,17 @@ function CarProfile() {
   };
 
   const submitPublication = (e) => {
-    e.prevent.default();
+    e.preventDefault();
     axios
       .post("http://localhost:3310/api/publish", {
-        image,
-        description,
+        image: image.image,
+        description: description.description,
       })
       .then(() => {
         setImage("");
         setDescription("");
       })
-      .catch((error) => console.info(error));
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -50,7 +50,7 @@ function CarProfile() {
           onChange={handleChangeDescription}
         />
 
-        <button type="button">Publier</button>
+        <button type="submit">Publier</button>
       </form>
     </div>
   );

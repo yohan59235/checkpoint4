@@ -1,14 +1,13 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import axios from "axios";
 
-// import UserContext from "../../services/UseContext";
+import UserContext from "../../services/UseContext";
 
 import "./connexion.css";
 
 function Connexion() {
-  // const { setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,7 +33,13 @@ function Connexion() {
           withCredentials: true,
         }
       )
-      .then((response) => console.info(response))
+      .then((response) =>
+        setUser({
+          email: response.data.email,
+          id: response.data.id,
+          nickname: response.data.nickname,
+        })
+      )
       .catch((error) => console.error(error));
   };
 
