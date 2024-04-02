@@ -4,6 +4,8 @@ import { createContext, useMemo, useState, useEffect } from "react";
 const UserContext = createContext();
 
 export function UserProvider({ children }) {
+  const [userId, setUserId] = useState(null);
+
   const [user, setUser] = useState({
     id: localStorage.getItem("id"),
     email: localStorage.getItem("email"),
@@ -20,6 +22,8 @@ export function UserProvider({ children }) {
     () => ({
       user,
       setUser,
+      userId,
+      setUserId,
     }),
     [user]
   );

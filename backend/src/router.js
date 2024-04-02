@@ -26,7 +26,11 @@ router.get("/users/:id", userControllers.read);
 
 // Route to login / logout
 router.post("/login", authControllers.login);
-router.delete("/logout", authControllers.disconnected);
+router.delete(
+  "/logout",
+  authMiddlewares.verifyToken,
+  authControllers.disconnected
+);
 
 // Route to add a new item
 router.post("/items", itemControllers.add);
@@ -34,13 +38,14 @@ router.post("/users", authMiddlewares.hashPassword, userControllers.add);
 
 // Route to database publish
 router.get("/publish", publishControllers.browse);
-router.post("/publish", authMiddlewares.verifyToken, publishControllers.add);
+router.post("/publish", publishControllers.add);
 
 // Route to update
-router.put("/users/:id", userControllers.edit);
+router.put("/settings", userControllers.edit);
 
 // Route to delete
 router.delete("/users/:id", userControllers.destroy);
+router.delete("/logout", authControllers.disconnected);
 
 /* ************************************************************************* */
 

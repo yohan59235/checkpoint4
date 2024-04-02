@@ -65,6 +65,8 @@ const add = async (req, res, next) => {
     id_user: req.params.id,
   };
 
+  console.info("publish infos", publishInfos);
+
   try {
     const result = await tables.publish.create(publishInfos);
     res.status(200).json({ result });

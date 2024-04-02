@@ -12,7 +12,7 @@ class PublishManager extends AbstractManager {
       `INSERT INTO ${this.table} (image, description, id_user) VALUES (?,?,?)`,
       [publishInfos.image, publishInfos.description, publishInfos.id_user]
     );
-    return result.addUser;
+    return result.addPublish;
   }
 
   // The Rs of CRUD - Read operations

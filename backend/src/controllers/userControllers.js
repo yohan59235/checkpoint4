@@ -23,7 +23,7 @@ const read = async (req, res, next) => {
 
     // If the item is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the item in JSON format
-    if (user == null) {
+    if (user === null) {
       res.sendStatus(404);
     } else {
       res.json(user);
@@ -41,7 +41,7 @@ const edit = async (req, res, next) => {
   const userInfos = {
     email: req.body.email,
     nickname: req.body.nickname,
-    id: req.params.id,
+    id: req.body.id,
   };
 
   try {

@@ -8,6 +8,7 @@ import "./connexion.css";
 
 function Connexion() {
   const { setUser } = useContext(UserContext);
+  const { setUserId } = useContext(UserContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,13 +34,14 @@ function Connexion() {
           withCredentials: true,
         }
       )
-      .then((response) =>
+      .then((response) => {
         setUser({
           email: response.data.email,
           id: response.data.id,
           nickname: response.data.nickname,
-        })
-      )
+        });
+        setUserId(response.data.id);
+      })
       .catch((error) => console.error(error));
   };
 
