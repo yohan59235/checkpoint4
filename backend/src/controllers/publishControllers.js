@@ -62,14 +62,14 @@ const add = async (req, res, next) => {
   const publishInfos = {
     image: req.body.image,
     description: req.body.description,
-    id_user: req.params.id,
+    id_user: req.body.id_user,
   };
 
   console.info("publish infos", publishInfos);
 
   try {
     const result = await tables.publish.create(publishInfos);
-    res.status(200).json({ result });
+    res.status(200).json({ "la publication a bien été postée": result });
   } catch (error) {
     next(error);
   }

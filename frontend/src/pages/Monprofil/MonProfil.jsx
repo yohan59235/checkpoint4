@@ -93,7 +93,7 @@ function MonProfil() {
         <input
           type="submit"
           onClick={getSettings}
-          value="confirmez les modifications"
+          value="confirmer les modifications"
         />
       </div>
 
@@ -109,9 +109,15 @@ function MonProfil() {
 
       <div className="Delete_Account">
         <h4>Vous voulez nous quitter ? T_T</h4>
-        <button type="button" onChange={getRemoveAccount}>
-          Supprimer mon compte
-        </button>
+        <Link to="/">
+          <button
+            type="button"
+            className="Button_Delete_Account"
+            onClick={getRemoveAccount}
+          >
+            Supprimer mon compte
+          </button>
+        </Link>
       </div>
     </div>
   );

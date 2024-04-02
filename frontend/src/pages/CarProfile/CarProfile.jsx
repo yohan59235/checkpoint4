@@ -7,11 +7,13 @@ import "./carprofile.css";
 
 function CarProfile() {
   const { userId } = useContext(UserContext);
+  console.info("je suis l'user", userId);
   // const [image, setImage] = useState("");
   // const [description, setDescription] = useState();
   const [publication, setPublication] = useState({
     image: "",
     description: "",
+    id_user: userId,
   });
 
   const handleChange = (event) => {
@@ -26,11 +28,17 @@ function CarProfile() {
   const submitPublication = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3310/api/publish", {
-        image: publication.image,
-        description: publication.description,
-        id_user: userId,
-      })
+      .post(
+        "http://localhost:3310/api/publish",
+        {
+          image: publication.image,
+          description: publication.description,
+          id_user: userId,
+        },
+        {
+          withCredentials: true,
+        }
+      )
       .then((response) => {
         console.info("enregitrement publication:", response);
       })
@@ -39,7 +47,7 @@ function CarProfile() {
 
   return (
     <div className="CarProfile_Page">
-      <h3>Partagez le véhicule qui vous fait vibrer!</h3>
+      <h3>Partagez le véhicule qui vous fait vibrer !</h3>
 
       <form onSubmit={submitPublication}>
         <input
