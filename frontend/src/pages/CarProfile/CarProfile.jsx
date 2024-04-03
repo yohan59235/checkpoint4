@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import UserContext from "../../services/UseContext";
 
@@ -47,6 +48,11 @@ function CarProfile() {
 
   return (
     <div className="CarProfile_Page">
+      <div>
+        <Link to="/mypublish">
+          <p>Voir mes publications</p>
+        </Link>
+      </div>
       <h3>Partagez le véhicule qui vous fait vibrer !</h3>
 
       <form onSubmit={submitPublication}>

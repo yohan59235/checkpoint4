@@ -2,8 +2,53 @@
   text-align: center;
 }
 
+.Link_My_Publish {
+  color: var(--turquoise-color);
+  margin-top: 2rem;
+}
+
+.CarProfile_Page > h3 {
+  margin: 3rem 0rem 2rem 0rem;
+}
+
 .CarProfile_Page > form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.CarProfile_Page > form > input {
+  text-align: center;
+  width: 20rem;
+  height: 1.7rem;
+  background-color: var(--gray-color);
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.CarProfile_Page > form > textarea {
+  background-color: var(--black-color);
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.CarProfile_Page > form > button {
+  border: none;
+  background-color: var(--black-color);
+  color: white;
+  width: 10rem;
+  height: 3rem;
+  margin: 3rem 0rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.CarProfile_Page > form > button:hover {
+  background-color: var(--turquoise-color);
+  transition: 0.5s ease;
+  color: black;
 }

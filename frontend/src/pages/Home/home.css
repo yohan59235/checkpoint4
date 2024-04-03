@@ -1,3 +1,6 @@
 .Home_Page {
-    height: 100vh;
+  height: 62vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--turquoise-color) var(--black-color);
 }

@@ -13,6 +13,7 @@ import FAQ from "./pages/FAQ/FAQ";
 import Contact from "./pages/Contact/Contact";
 import Politique from "./pages/Politique/Politique";
 import MonProfil from "./pages/Monprofil/MonProfil";
+import MyPublish from "./components/MyPublish/MyPublish";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/monprofil",
         element: <MonProfil />,
+      },
+      {
+        path: "/mypublish",
+        element: <MyPublish />,
       },
     ],
   },

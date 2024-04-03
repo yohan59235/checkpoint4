@@ -17,9 +17,10 @@ const browse = async (req, res, next) => {
 
 // The R of BREAD - Read operation
 const read = async (req, res, next) => {
+  const { userId } = req.params.id_user;
   try {
     // Fetch a specific item from the database based on the provided ID
-    const publish = await tables.publish.read(req.params.id);
+    const publish = await tables.publish.read(userId);
 
     // If the item is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the item in JSON format
