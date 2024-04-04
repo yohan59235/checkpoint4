@@ -1,0 +1,13 @@
+.FAQ_Page {
+  margin: 2rem;
+}
+
+.FAQ_Page > h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.FAQ_Page > h4 {
+  margin: 2rem 0rem 1rem 0rem;
+  text-decoration: underline;
+}

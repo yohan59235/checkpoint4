@@ -1,0 +1,155 @@
+.Profile_Component {
+  text-align: center;
+}
+
+.Profile_Component > h2 {
+  margin: 2rem 0.5rem;
+}
+
+.Nickname_Modifs > h4 {
+  margin-bottom: 1rem;
+}
+
+.Nickname_Modifs > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Nickname_Modifs > label > input {
+  background-color: var(--gray-color);
+  border: none;
+  width: 15rem;
+  height: 1.7rem;
+  border-bottom: 1px solid black;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.Email_Modifs > h4 {
+  margin-bottom: 1rem;
+}
+
+.Email_Modifs > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Email_Modifs > label > input {
+  background-color: var(--gray-color);
+  border: none;
+  width: 15rem;
+  height: 1.7rem;
+  border-bottom: 1px solid black;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.Button_Modifs > input {
+  border: none;
+  background-color: var(--black-color);
+  color: white;
+  width: 16rem;
+  height: 3rem;
+  margin: 1rem 0rem 2rem 0rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.Button_Modifs > input:hover {
+  background-color: var(--turquoise-color);
+  transition: 0.5s ease;
+  color: black;
+}
+
+.Logout_Icone {
+  width: 5rem;
+  margin-bottom: 3rem;
+}
+
+.Button_Delete_Account {
+  border: none;
+  background-color: rgb(243, 93, 93);
+  color: white;
+  width: 14rem;
+  height: 3rem;
+  margin: 1rem 0rem 2rem 0rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.Button_Delete_Account:hover {
+  color: black;
+  background-color: red;
+  transition: 0.5s ease;
+}
+
+@media screen and (min-width: 1640px) {
+  .Profile_Component > h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0rem 4rem 0rem;
+  }
+
+  .Form_Modifs_Delete {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Nickname_Modifs > h4 {
+    font-size: 1.5rem;
+  }
+
+  .Nickname_Modifs > label {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .Nickname_Modifs > label > input {
+    margin: 2rem;
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+
+  .Email_Modifs > h4 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .Email_Modifs > label {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .Email_Modifs > label > input {
+    margin: 2rem;
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+
+  .Button_Modifs > input {
+    font-size: 1.5rem;
+    width: 20rem;
+    height: 4rem;
+    margin: 2rem 0rem 5rem 0rem;
+  }
+
+  .Logout_Icone {
+    width: 7rem;
+    margin: 5rem 0rem 5rem 0rem;
+  }
+
+  .Delete_Account > h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .Button_Delete_Account {
+    font-size: 1.5rem;
+    width: 19rem;
+    height: 4rem;
+  }
+}

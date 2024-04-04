@@ -1,0 +1,92 @@
+.CarProfile_Page {
+  text-align: center;
+  height: 73vh;
+}
+
+.Link_To_MyPublish {
+  color: var(--turquoise-color);
+  margin: 2rem auto;
+  border-bottom: 1px solid var(--turquoise-color);
+  width: 20rem;
+}
+
+.CarProfile_Page > h3 {
+  margin: 3rem 0rem 2rem 0rem;
+}
+
+.Form > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Form > form > input {
+  text-align: center;
+  width: 20rem;
+  height: 1.7rem;
+  background-color: var(--gray-color);
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.Form > form > textarea {
+  background-color: var(--black-color);
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.Form > form > button {
+  border: none;
+  background-color: var(--black-color);
+  color: white;
+  width: 10rem;
+  height: 3rem;
+  margin: 3rem 0rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.Form > form > button:hover {
+  background-color: var(--turquoise-color);
+  transition: 0.5s ease;
+  color: black;
+}
+
+@media screen and (min-width: 1640px) {
+  .Link_To_MyPublish {
+    font-size: 1.5rem;
+  }
+
+  .CarProfile_Page > h3 {
+    font-size: 1.5rem;
+  }
+
+  .Form > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 6rem;
+  }
+
+  .Form > form > input {
+    font-size: 1.5rem;
+    width: 20rem;
+  }
+
+  .Form > form > textarea {
+    width: 37rem;
+    font-size: 1.5rem;
+    height: 15rem;
+    margin-left: -8rem;
+  }
+
+  .Form > form > button {
+    font-size: 1.5rem;
+    width: 12rem;
+    height: 4rem;
+  }
+}

@@ -1,0 +1,58 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.Header_Logo {
+  width: 5rem;
+  filter: invert();
+}
+
+.Header > h1 {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.Header_User {
+  width: 2rem;
+  margin-right: 1rem;
+  filter: invert();
+}
+
+.Header_Profile {
+  width: 2rem;
+  filter: invert();
+  margin-right: 1rem;
+}
+
+.Header_Add_Car {
+  width: 2rem;
+  margin-right: 1rem;
+  filter: invert();
+}
+
+@media screen and (min-width: 1640px) {
+  .Header_Logo {
+    width: 6rem;
+  }
+
+  .Header > h1 {
+    font-size: 1.9rem;
+  }
+
+  .Header_User {
+    width: 3rem;
+  }
+
+  .Header_Profile {
+    width: 3rem;
+    margin-right: 2rem;
+  }
+
+  .Header_Add_Car {
+    width: 3rem;
+  }
+}

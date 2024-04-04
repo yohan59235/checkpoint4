@@ -1,0 +1,81 @@
+.Connexion_Page {
+  text-align: center;
+  margin-top: 3rem;
+  height: 73vh;
+}
+
+.Connexion_Page > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Connexion_Page > form > label {
+  margin: 3rem 0rem 1rem 0rem;
+}
+
+.Connexion_Page > form > input {
+  text-align: center;
+  width: 15rem;
+  height: 1.7rem;
+  background-color: var(--gray-color);
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
+}
+
+.Button_Login {
+  border: none;
+  background-color: var(--black-color);
+  color: white;
+  width: 10rem;
+  height: 3rem;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.Button_Login:hover {
+  background-color: var(--turquoise-color);
+  transition: 0.5s ease;
+  color: black;
+}
+
+.Link_Register {
+  color: white;
+  text-decoration: none;
+  margin: 2rem 0rem 2rem 0rem;
+}
+
+.Link_Register:hover {
+  color: var(--turquoise-color);
+  transition: 0.5s ease;
+}
+
+@media screen and (min-width: 1640px) {
+  .Connexion_Page > h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .Connexion_Page > form > label {
+    font-size: 1.5rem;
+    margin: 2rem 0rem 2rem 0rem;
+  }
+
+  .Connexion_Page > form > input {
+    font-size: 1.3rem;
+    width: 20rem;
+    margin: 2rem 0rem;
+  }
+
+  .Button_Login {
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 4rem;
+  }
+
+  .Link_Register {
+    font-size: 1.3rem;
+  }
+}

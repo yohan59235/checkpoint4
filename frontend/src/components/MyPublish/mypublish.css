@@ -1,0 +1,32 @@
+.Publication_Area {
+  height: fit-content;
+}
+
+.Button_DeleteOrModifs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.Button_Delete {
+  background-color: rgb(255, 126, 126);
+  color: black;
+  border: none;
+  height: 1.6rem;
+  padding: 0rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.Button_Delete:hover {
+  background-color: red;
+  transition: 0.5s ease;
+}
+
+@media screen and (min-width: 1640px) {
+  .MyPublish_Component {
+    display: flex;
+    flex-wrap: wrap;
+    height: 75vh;
+  }
+}

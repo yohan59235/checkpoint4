@@ -1,0 +1,32 @@
+.Contact_Page {
+  text-align: center;
+  margin: 2rem;
+}
+
+.Github_Section,
+.Linkedin_Section,
+.Email_Section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0rem;
+}
+
+.Github_Section > img,
+.Linkedin_Section > img,
+.Email_Section > img {
+  width: 2rem;
+  filter: invert();
+  margin-right: 1rem;
+}
+
+.Github_Section > a,
+.Linkedin_Section > a {
+  color: white;
+}
+
+.Github_Section > a:hover,
+.Linkedin_Section > a:hover {
+  color: var(--turquoise-color);
+  transition: 0.5s ease;
+}
