@@ -1,19 +1,19 @@
 .Politique_Page {
-    padding: 0rem 1.5rem;
-    text-align: justify;
+  padding: 0rem 1.5rem;
+  text-align: justify;
 }
 
 .Politique_Page > h3 {
-    margin: 2rem 0rem;
-    font-size: 1.4rem;
+  margin: 2rem 0rem;
+  font-size: 1.4rem;
 }
 
 .Politique_Page > p {
-    margin: 1rem 0rem;
+  margin: 1rem 0rem;
 }
 
 .Politique_Page > h5 {
-    margin: 2rem 0rem;
-    font-size: 1.2rem;
-    text-decoration: underline;
+  margin: 2rem 0rem;
+  font-size: 1.2rem;
+  text-decoration: underline;
 }

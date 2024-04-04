@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
 
 :root {
-  font-family:  "Anta", sans-serif;
+  font-family: "Anta", sans-serif;
   color: white;
 
-  --black-color:#222831;
-  --gray-color:#393e46;
-  --turquoise-color:#00adb5;
+  --black-color: #222831;
+  --gray-color: #393e46;
+  --turquoise-color: #00adb5;
 }
 
 * {
