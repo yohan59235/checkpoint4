@@ -61,63 +61,68 @@ function MonProfil() {
   return (
     <div className="Profile_Component">
       <h2>Hey {userInfos.nickname}, bienvenue sur ton profil</h2>
-      <div className="Nickname_Modifs">
-        <h4>Vous souhaitez modifier votre pseudo ?</h4>
-        <label>
-          {" "}
-          Nouveau pseudo{" "}
-          <input
-            type="text"
-            name="nickname"
-            placeholder="Entrez votre nouveau pseudo"
-            onChange={handleChangeNickname}
-          />
-        </label>
-      </div>
+      <div className="Form_Modifs_Delete">
+        <div className="Modifs_Form">
+          <div className="Nickname_Modifs">
+            <h4>Vous souhaitez modifier votre pseudo ?</h4>
+            <label>
+              {" "}
+              Nouveau pseudo{" "}
+              <input
+                type="text"
+                name="nickname"
+                placeholder="Entrez votre nouveau pseudo"
+                onChange={handleChangeNickname}
+              />
+            </label>
+          </div>
 
-      <div className="Email_Modifs">
-        <h4>Vous souhaitez modifier votre email ?</h4>
-        <label>
-          {" "}
-          Nouvel email{" "}
-          <input
-            type="text"
-            name="email"
-            placeholder="Entrez votre nouvel email"
-            onChange={handleChangeEmail}
-          />
-        </label>
-      </div>
+          <div className="Email_Modifs">
+            <h4>Vous souhaitez modifier votre email ?</h4>
+            <label>
+              {" "}
+              Nouvel email{" "}
+              <input
+                type="text"
+                name="email"
+                placeholder="Entrez votre nouvel email"
+                onChange={handleChangeEmail}
+              />
+            </label>
+          </div>
+          <div className="Button_Modifs">
+            <input
+              type="submit"
+              onClick={getSettings}
+              value="confirmer les modifications"
+            />
+          </div>
+        </div>
 
-      <div className="Button_Modifs">
-        <input
-          type="submit"
-          onClick={getSettings}
-          value="confirmer les modifications"
-        />
-      </div>
+        <div className="Disconnect_And_Delete">
+          <div className="Disconnected">
+            <Link to="/" onClick={handleLogout}>
+              <img
+                src="http://localhost:3310/public/assets/images/off.png"
+                alt="logout"
+                className="Logout_Icone"
+              />
+            </Link>
+          </div>
 
-      <div className="Disconnected">
-        <Link to="/" onClick={handleLogout}>
-          <img
-            src="http://localhost:3310/public/assets/images/off.png"
-            alt="logout"
-            className="Logout_Icone"
-          />
-        </Link>
-      </div>
-
-      <div className="Delete_Account">
-        <h4>Vous voulez nous quitter ? T_T</h4>
-        <Link to="/">
-          <button
-            type="button"
-            className="Button_Delete_Account"
-            onClick={getRemoveAccount}
-          >
-            Supprimer mon compte
-          </button>
-        </Link>
+          <div className="Delete_Account">
+            <h4>Vous voulez nous quitter ? T_T</h4>
+            <Link to="/">
+              <button
+                type="button"
+                className="Button_Delete_Account"
+                onClick={getRemoveAccount}
+              >
+                Supprimer mon compte
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

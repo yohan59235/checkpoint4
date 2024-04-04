@@ -16,22 +16,14 @@ const browse = async (req, res, next) => {
 };
 
 // The R of BREAD - Read operation
-const read = async (req, res, next) => {
-  const { userId } = req.params.id_user;
-  try {
-    // Fetch a specific item from the database based on the provided ID
-    const publish = await tables.publish.read(userId);
+const getPublicationsByUserId = async (req, res, next) => {
+  const { userId } = req.params;
 
-    // If the item is not found, respond with HTTP 404 (Not Found)
-    // Otherwise, respond with the item in JSON format
-    if (publish == null) {
-      res.sendStatus(404);
-    } else {
-      res.json(publish);
-    }
-  } catch (err) {
-    // Pass any errors to the error-handling middleware
-    next(err);
+  try {
+    const userPublications = await tables.publish.getUserPublications(userId);
+    res.json(userPublications);
+  } catch (error) {
+    next(error);
   }
 };
 
@@ -95,7 +87,7 @@ const destroy = async (req, res, next) => {
 // Ready to export the controller functions
 module.exports = {
   browse,
-  read,
+  getPublicationsByUserId,
   edit,
   add,
   destroy,

@@ -9,8 +9,6 @@ import "./carprofile.css";
 function CarProfile() {
   const { userId } = useContext(UserContext);
   console.info("je suis l'user", userId);
-  // const [image, setImage] = useState("");
-  // const [description, setDescription] = useState();
   const [publication, setPublication] = useState({
     image: "",
     description: "",
@@ -22,9 +20,6 @@ function CarProfile() {
   };
 
   console.info("publication", publication);
-  // const handleChangeDescription = (event) => {
-  //   setDescription({ ...description, [event.target.name]: event.target.value });
-  // };
 
   const submitPublication = (e) => {
     e.preventDefault();
@@ -49,33 +44,34 @@ function CarProfile() {
   return (
     <div className="CarProfile_Page">
       <div>
-        <Link to="/mypublish">
-          <p>Voir mes publications</p>
+        <Link to="/mypublish" publication={publication} id={publication.id}>
+          <p className="Link_To_MyPublish">Voir mes publications</p>
         </Link>
       </div>
       <h3>Partagez le véhicule qui vous fait vibrer !</h3>
 
-      <form onSubmit={submitPublication}>
-        <input
-          type="text"
-          name="image"
-          placeholder="Ajoutez l'URL de l'image"
-          onChange={handleChange}
-          value={publication.image}
-        />
+      <div className="Form">
+        <form onSubmit={submitPublication}>
+          <input
+            type="text"
+            name="image"
+            placeholder="Ajoutez l'URL de l'image"
+            onChange={handleChange}
+            value={publication.image}
+          />
 
-        <textarea
-          type="text"
-          name="description"
-          cols="50"
-          rows="15"
-          placeholder="Ajoutez une petite description"
-          onChange={handleChange}
-          value={publication.description}
-        />
-
-        <button type="submit">Publier</button>
-      </form>
+          <textarea
+            type="text"
+            name="description"
+            cols="50"
+            rows="15"
+            placeholder="Ajoutez une petite description"
+            onChange={handleChange}
+            value={publication.description}
+          />
+          <button type="submit">Publier</button>
+        </form>
+      </div>
     </div>
   );
 }

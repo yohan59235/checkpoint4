@@ -1,6 +1,13 @@
 .Home_Page {
-  height: 62vh;
+  height: 77vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--turquoise-color) var(--black-color);
+}
+
+@media screen and (min-width: 1640px) {
+  .Home_Page {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

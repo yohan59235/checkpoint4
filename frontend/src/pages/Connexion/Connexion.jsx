@@ -40,6 +40,7 @@ function Connexion() {
           id: response.data.id,
           nickname: response.data.nickname,
         });
+        console.info("mon id est", response.data.id);
         setUserId(response.data.id);
       })
       .catch((error) => console.error(error));

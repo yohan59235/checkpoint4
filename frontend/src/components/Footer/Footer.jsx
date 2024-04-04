@@ -11,13 +11,10 @@ function Footer() {
         alt="Logo du site"
       />
 
-      <div className="First_List_Link">
+      <div className="List_Link">
         <Link to="/contact">
           <p className="Contact">Contact</p>
         </Link>
-      </div>
-
-      <div className="Second_List_Link">
         <Link to="faq">
           <p className="FAQ">FAQ</p>
         </Link>

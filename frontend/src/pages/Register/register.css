@@ -1,3 +1,7 @@
+.Register_Page {
+  height: 73vh;
+}
+
 .Register_Page > h2 {
   text-align: center;
   margin-top: 2rem;
@@ -55,4 +59,30 @@
 
 .Close:hover {
   background-color: var(--turquoise-color);
+}
+
+@media screen and (min-width: 1640px) {
+  .Register_Page > h2 {
+    font-size: 2rem;
+  }
+
+  .Register_Page > form > label {
+    font-size: 1.5rem;
+  }
+
+  .Register_Page > form > input {
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+
+  .Button_Register {
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 4rem;
+  }
+
+  .close > p {
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
 }

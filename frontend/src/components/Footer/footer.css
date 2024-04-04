@@ -1,27 +1,22 @@
 .Footer_Component {
   border-top: 1px solid black;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
 .Footer_Component > img {
   filter: invert();
-  width: 12rem;
+  width: 8rem;
 }
 
-.First_List_Link {
-  display: flex;
-}
-
-.Second_List_Link {
-  display: flex;
-  margin: 1rem 0rem;
+.List_Link {
+  text-align: center;
 }
 
 .Contact {
   color: white;
-  margin-right: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .Contact:hover {
@@ -31,7 +26,7 @@
 
 .FAQ {
   color: white;
-  margin-right: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .FAQ:hover {
@@ -46,4 +41,18 @@
 .Politique:hover {
   color: var(--turquoise-color);
   transition: 0.5s ease;
+}
+
+@media screen and (min-width: 1640px) {
+  .List_Link {
+    display: flex;
+  }
+
+  .Contact {
+    margin-right: 8rem;
+  }
+
+  .FAQ {
+    margin-right: 8rem;
+  }
 }

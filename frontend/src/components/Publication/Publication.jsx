@@ -5,10 +5,12 @@ import "./publication.css";
 
 function Publication({ post }) {
   return (
-    <div className="Publication_Area">
-      <h3>{post.user_nickname}</h3>
-      <img src={post.image} alt="publication" />
-      <p>{post.description}</p>
+    <div className="Publication_Component">
+      <div className="Publication_Area">
+        <h3>{post.user_nickname}</h3>
+        <img src={post.image} alt="publication" />
+        <p>{post.description}</p>
+      </div>
     </div>
   );
 }

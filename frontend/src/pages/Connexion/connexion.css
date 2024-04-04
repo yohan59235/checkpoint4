@@ -1,6 +1,7 @@
 .Connexion_Page {
   text-align: center;
   margin-top: 3rem;
+  height: 73vh;
 }
 
 .Connexion_Page > form {
@@ -49,4 +50,32 @@
 .Link_Register:hover {
   color: var(--turquoise-color);
   transition: 0.5s ease;
+}
+
+@media screen and (min-width: 1640px) {
+  .Connexion_Page > h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .Connexion_Page > form > label {
+    font-size: 1.5rem;
+    margin: 2rem 0rem 2rem 0rem;
+  }
+
+  .Connexion_Page > form > input {
+    font-size: 1.3rem;
+    width: 20rem;
+    margin: 2rem 0rem;
+  }
+
+  .Button_Login {
+    font-size: 1.5rem;
+    width: 15rem;
+    height: 4rem;
+  }
+
+  .Link_Register {
+    font-size: 1.3rem;
+  }
 }

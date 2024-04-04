@@ -72,7 +72,7 @@
 
 .Button_Delete_Account {
   border: none;
-  background-color: rgb(231, 73, 73);
+  background-color: rgb(243, 93, 93);
   color: white;
   width: 14rem;
   height: 3rem;
@@ -83,5 +83,73 @@
 
 .Button_Delete_Account:hover {
   color: black;
+  background-color: red;
   transition: 0.5s ease;
+}
+
+@media screen and (min-width: 1640px) {
+  .Profile_Component > h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0rem 4rem 0rem;
+  }
+
+  .Form_Modifs_Delete {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Nickname_Modifs > h4 {
+    font-size: 1.5rem;
+  }
+
+  .Nickname_Modifs > label {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .Nickname_Modifs > label > input {
+    margin: 2rem;
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+
+  .Email_Modifs > h4 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .Email_Modifs > label {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .Email_Modifs > label > input {
+    margin: 2rem;
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+
+  .Button_Modifs > input {
+    font-size: 1.5rem;
+    width: 20rem;
+    height: 4rem;
+    margin: 2rem 0rem 5rem 0rem;
+  }
+
+  .Logout_Icone {
+    width: 7rem;
+    margin: 5rem 0rem 5rem 0rem;
+  }
+
+  .Delete_Account > h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .Button_Delete_Account {
+    font-size: 1.5rem;
+    width: 19rem;
+    height: 4rem;
+  }
 }

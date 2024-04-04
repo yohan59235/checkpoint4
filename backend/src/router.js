@@ -38,8 +38,9 @@ router.post("/users", authMiddlewares.hashPassword, userControllers.add);
 
 // Route to database publish
 router.get("/publish", publishControllers.browse);
-router.get("/publish/:id_user", publishControllers.read);
+router.get("/publish/:userId", publishControllers.getPublicationsByUserId);
 router.post("/publish", publishControllers.add);
+router.delete("/publish/:id", publishControllers.destroy);
 
 // Route to update
 router.put("/settings", userControllers.edit);

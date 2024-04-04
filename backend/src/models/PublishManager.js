@@ -17,16 +17,12 @@ class PublishManager extends AbstractManager {
 
   // The Rs of CRUD - Read operations
 
-  async read(userId) {
-    // Execute the SQL SELECT query to retrieve a specific item by its ID
+  async getUserPublications(userId) {
     const [rows] = await this.database.query(
       `SELECT * FROM ${this.table} WHERE id_user = ?`,
-      // `SELECT publish.description, publish.image FROM ${this.table} WHERE id_user = ?`,
       [userId]
     );
-
-    // Return the first row of the result, which represents the item
-    return rows[0];
+    return rows;
   }
 
   async readAll() {
